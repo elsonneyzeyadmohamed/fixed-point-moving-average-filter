@@ -4,7 +4,17 @@ A MATLAB simulation study of a 32-sample moving-average filter. It compares a di
 
 The central design question is: **How can the filter keep its hardware cost low without allowing fixed-point error to grow until it overwhelms the signal?** The simulation answer is to use the recursive update between refreshes, then periodically recompute the current window sum. The refresh interval trades SQNR against correction activity and hardware cost.
 
-> This repository contains the MATLAB study and the report that documents the results. The project does not include a synthesized or verified RTL implementation of the refresh architecture.
+> This repository includes the MATLAB study, functional Verilog RTL, a self-checking testbench, and supplied ModelSim waveform evidence. The RTL has not been independently rerun or synthesized as part of this repository update.
+
+## RTL implementation and results
+
+The `rtl/` directory contains two implementations of the 32-sample moving-average filter. `non_recursive_filter.v` is the direct-form baseline: it stores the sample history and sums the current window. `refreshed_filter.v` maintains a running sum and periodically replaces it using a shadow sum accumulated over the current window. Defaults are `M=32`, 8-bit signed input, 10-bit output, and `REFRESH=64`. The module keeps `ready_out` asserted and does not apply backpressure.
+
+`tb_moving_average.v` supplies 500 random signed samples to both modules, compares their outputs, and reports a final mismatch count. In ModelSim or Questa, run `do run.do` from the `rtl/` directory. The script compiles the RTL and testbench, loads `wave.do`, and runs the simulation. The supplied waveform below shows the refreshed and direct-form output traces tracking closely during the displayed interval. The source folder had no transcript, so the screenshot does not prove the final testbench verdict. The waveform database is available at [`results/vsim.wlf`](results/vsim.wlf).
+
+![ModelSim waveform comparing refreshed and direct-form filter outputs](results/modelsim-waveform.png)
+
+This RTL is a functional study; no synthesis, timing, or area results are included.
 
 ## Problem
 
