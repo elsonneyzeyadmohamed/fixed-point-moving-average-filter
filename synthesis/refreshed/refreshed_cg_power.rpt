@@ -1,0 +1,56 @@
+Loading db file '/home/ICer/Labs/moving_avg_filt_refresh/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : refreshed_filter
+Version: O-2018.06-SP1
+Date   : Tue Oct 13 01:32:40 2026
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/ICer/Labs/moving_avg_filt_refresh/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 130.2541 uW   (74%)
+  Net Switching Power  =  45.8675 uW   (26%)
+                         ---------
+Total Dynamic Power    = 176.1216 uW  (100%)
+
+Cell Leakage Power     =   7.2788 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  4.1548e-02        2.9798e-03        6.0673e+05        4.5134e-02  (  24.61%)
+register       6.5515e-02        5.0480e-03        3.4356e+06        7.3999e-02  (  40.35%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.3191e-02        3.7840e-02        3.2365e+06        6.4267e-02  (  35.04%)
+--------------------------------------------------------------------------------------------------
+Total              0.1303 mW     4.5867e-02 mW     7.2788e+06 pW         0.1834 mW
+1
