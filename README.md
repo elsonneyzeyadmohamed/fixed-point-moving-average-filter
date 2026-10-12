@@ -115,10 +115,16 @@ The input is randomly generated with `randi([-128, 127], 1, 100000)`. No random 
 - [Recursive SQNR histogram](figures/07-recursive-sqnr-histogram.png)
 - [Refresh error comparison](figures/08-refresh-bounds-error.png)
 - [Refresh architecture](figures/09-refresh-system-architecture.png)
+
 - [Refresh finite-state machine](figures/10-refresh-fsm.png)
+
 - [Refresh SQNR over time](figures/11-refresh-sqnr-time-series.png)
 - [SQNR versus refresh interval](figures/12-sqnr-vs-refresh-interval.png)
 - [Refreshed SQNR histogram](figures/13-refresh-sqnr-histogram.png)
+
+## Synthesis comparison
+
+The supplied Design Compiler reports show the refreshed implementation with 26.71% lower mapped area and 45.49% lower estimated dynamic power than the direct-form baseline. The synthesis paths are also shallower (3 logic levels vs 20). These power numbers are low-effort estimates with unannotated activity, not measured silicon values. See the [full metric comparison and report files](synthesis/README.md).
 
 ## Reference
 
