@@ -14,7 +14,7 @@ The `rtl/` directory contains two implementations of the 32-sample moving-averag
 
 ![ModelSim waveform comparing refreshed and direct-form filter outputs](results/modelsim-waveform.png)
 
-This RTL is a functional study; no synthesis, timing, or area results are included.
+The supplied synthesis reports are in `synthesis/`; their power values are low-effort estimates because switching activity was not annotated. See the comparison and caveats in [synthesis/README.md](synthesis/README.md).
 
 ## Problem
 
