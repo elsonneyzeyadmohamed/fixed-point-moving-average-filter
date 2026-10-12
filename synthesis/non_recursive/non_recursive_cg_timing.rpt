@@ -1,0 +1,604 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : non_recursive_filter
+Version: O-2018.06-SP1
+Date   : Tue Oct 13 01:32:21 2026
+****************************************
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: delay_line_reg[26][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[26][0]/CK (DFFRQX2M)                     0.00       0.50 r
+  delay_line_reg[26][0]/Q (DFFRQX2M)                      0.50       1.00 f
+  U588/Y (AND2X1M)                                        0.21       1.21 f
+  add_21_root_add_0_root_add_23/U1_1/CO (ADDFX2M)         0.35       1.55 f
+  U272/Y (NAND2X2M)                                       0.08       1.64 r
+  U275/Y (NAND3X2M)                                       0.10       1.74 f
+  add_21_root_add_0_root_add_23/U1_3/CO (ADDFX1M)         0.32       2.06 f
+  add_21_root_add_0_root_add_23/U1_4/CO (ADDFX2M)         0.33       2.39 f
+  add_21_root_add_0_root_add_23/U1_5/CO (ADDFX1M)         0.33       2.72 f
+  add_21_root_add_0_root_add_23/U1_6/CO (ADDFX1M)         0.36       3.08 f
+  U612/Y (XOR3XLM)                                        0.53       3.60 f
+  add_10_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       3.60 f
+  add_10_root_add_0_root_add_23/U1_7/S (ADDFX2M)          0.55       4.16 f
+  add_10_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.53       4.69 f
+  add_5_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.54       5.23 f
+  add_2_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/A[7] (non_recursive_filter_DW01_add_0)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/U1_7/CO (ADDFX8M)          0.64       5.87 f
+  add_0_root_add_0_root_add_23/U6/Y (CLKNAND2X2M)         0.09       5.96 r
+  add_0_root_add_0_root_add_23/U9/Y (NAND3X2M)            0.10       6.06 f
+  add_0_root_add_0_root_add_23/U1_9/CO (ADDFX8M)          0.45       6.52 f
+  add_0_root_add_0_root_add_23/U1_10/CO (ADDFHX1M)        0.29       6.81 f
+  add_0_root_add_0_root_add_23/U1_11/CO (ADDFX8M)         0.46       7.27 f
+  add_0_root_add_0_root_add_23/U4/Y (CLKXOR2X2M)          0.37       7.63 r
+  add_0_root_add_0_root_add_23/U1/Y (CLKBUFX40M)          0.64       8.27 r
+  add_0_root_add_0_root_add_23/SUM[12] (non_recursive_filter_DW01_add_0)
+                                                          0.00       8.27 r
+  y[9] (out)                                              0.00       8.27 r
+  data arrival time                                                  8.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -8.27
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: delay_line_reg[26][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[26][0]/CK (DFFRQX2M)                     0.00       0.50 r
+  delay_line_reg[26][0]/Q (DFFRQX2M)                      0.50       1.00 f
+  U588/Y (AND2X1M)                                        0.21       1.21 f
+  add_21_root_add_0_root_add_23/U1_1/CO (ADDFX2M)         0.35       1.55 f
+  U272/Y (NAND2X2M)                                       0.08       1.64 r
+  U275/Y (NAND3X2M)                                       0.10       1.74 f
+  add_21_root_add_0_root_add_23/U1_3/CO (ADDFX1M)         0.32       2.06 f
+  add_21_root_add_0_root_add_23/U1_4/CO (ADDFX2M)         0.33       2.39 f
+  add_21_root_add_0_root_add_23/U1_5/CO (ADDFX1M)         0.33       2.72 f
+  add_21_root_add_0_root_add_23/U1_6/CO (ADDFX1M)         0.36       3.08 f
+  U612/Y (XOR3XLM)                                        0.53       3.60 f
+  add_10_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       3.60 f
+  add_10_root_add_0_root_add_23/U1_7/S (ADDFX2M)          0.55       4.16 f
+  add_10_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.53       4.69 f
+  add_5_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.54       5.23 f
+  add_2_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/A[7] (non_recursive_filter_DW01_add_0)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/U1_7/CO (ADDFX8M)          0.64       5.87 f
+  add_0_root_add_0_root_add_23/U6/Y (CLKNAND2X2M)         0.09       5.96 r
+  add_0_root_add_0_root_add_23/U9/Y (NAND3X2M)            0.10       6.06 f
+  add_0_root_add_0_root_add_23/U1_9/CO (ADDFX8M)          0.45       6.52 f
+  add_0_root_add_0_root_add_23/U1_10/CO (ADDFHX1M)        0.29       6.81 f
+  add_0_root_add_0_root_add_23/U1_11/CO (ADDFX8M)         0.46       7.27 f
+  add_0_root_add_0_root_add_23/U4/Y (CLKXOR2X2M)          0.37       7.63 r
+  add_0_root_add_0_root_add_23/U1/Y (CLKBUFX40M)          0.64       8.27 r
+  add_0_root_add_0_root_add_23/SUM[12] (non_recursive_filter_DW01_add_0)
+                                                          0.00       8.27 r
+  y[8] (out)                                              0.00       8.27 r
+  data arrival time                                                  8.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -8.27
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: delay_line_reg[26][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[26][0]/CK (DFFRQX2M)                     0.00       0.50 r
+  delay_line_reg[26][0]/Q (DFFRQX2M)                      0.50       1.00 f
+  U588/Y (AND2X1M)                                        0.21       1.21 f
+  add_21_root_add_0_root_add_23/U1_1/CO (ADDFX2M)         0.35       1.55 f
+  U272/Y (NAND2X2M)                                       0.08       1.64 r
+  U275/Y (NAND3X2M)                                       0.10       1.74 f
+  add_21_root_add_0_root_add_23/U1_3/CO (ADDFX1M)         0.32       2.06 f
+  add_21_root_add_0_root_add_23/U1_4/CO (ADDFX2M)         0.33       2.39 f
+  add_21_root_add_0_root_add_23/U1_5/CO (ADDFX1M)         0.33       2.72 f
+  add_21_root_add_0_root_add_23/U1_6/CO (ADDFX1M)         0.36       3.08 f
+  U612/Y (XOR3XLM)                                        0.53       3.60 f
+  add_10_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       3.60 f
+  add_10_root_add_0_root_add_23/U1_7/S (ADDFX2M)          0.55       4.16 f
+  add_10_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.53       4.69 f
+  add_5_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.54       5.23 f
+  add_2_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/A[7] (non_recursive_filter_DW01_add_0)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/U1_7/CO (ADDFX8M)          0.64       5.87 f
+  add_0_root_add_0_root_add_23/U6/Y (CLKNAND2X2M)         0.09       5.96 r
+  add_0_root_add_0_root_add_23/U9/Y (NAND3X2M)            0.10       6.06 f
+  add_0_root_add_0_root_add_23/U1_9/CO (ADDFX8M)          0.45       6.52 f
+  add_0_root_add_0_root_add_23/U1_10/CO (ADDFHX1M)        0.29       6.81 f
+  add_0_root_add_0_root_add_23/U1_11/CO (ADDFX8M)         0.46       7.27 f
+  add_0_root_add_0_root_add_23/U4/Y (CLKXOR2X2M)          0.37       7.63 r
+  add_0_root_add_0_root_add_23/U1/Y (CLKBUFX40M)          0.64       8.27 r
+  add_0_root_add_0_root_add_23/SUM[12] (non_recursive_filter_DW01_add_0)
+                                                          0.00       8.27 r
+  y[7] (out)                                              0.00       8.27 r
+  data arrival time                                                  8.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -8.27
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: delay_line_reg[26][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[26][0]/CK (DFFRQX2M)                     0.00       0.50 r
+  delay_line_reg[26][0]/Q (DFFRQX2M)                      0.50       1.00 f
+  U588/Y (AND2X1M)                                        0.21       1.21 f
+  add_21_root_add_0_root_add_23/U1_1/CO (ADDFX2M)         0.35       1.55 f
+  U272/Y (NAND2X2M)                                       0.08       1.64 r
+  U275/Y (NAND3X2M)                                       0.10       1.74 f
+  add_21_root_add_0_root_add_23/U1_3/CO (ADDFX1M)         0.32       2.06 f
+  add_21_root_add_0_root_add_23/U1_4/CO (ADDFX2M)         0.33       2.39 f
+  add_21_root_add_0_root_add_23/U1_5/CO (ADDFX1M)         0.33       2.72 f
+  add_21_root_add_0_root_add_23/U1_6/CO (ADDFX1M)         0.36       3.08 f
+  U612/Y (XOR3XLM)                                        0.53       3.60 f
+  add_10_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       3.60 f
+  add_10_root_add_0_root_add_23/U1_7/S (ADDFX2M)          0.55       4.16 f
+  add_10_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.53       4.69 f
+  add_5_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.54       5.23 f
+  add_2_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/A[7] (non_recursive_filter_DW01_add_0)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/U1_7/CO (ADDFX8M)          0.64       5.87 f
+  add_0_root_add_0_root_add_23/U6/Y (CLKNAND2X2M)         0.09       5.96 r
+  add_0_root_add_0_root_add_23/U9/Y (NAND3X2M)            0.10       6.06 f
+  add_0_root_add_0_root_add_23/U1_9/CO (ADDFX8M)          0.45       6.52 f
+  add_0_root_add_0_root_add_23/U1_10/CO (ADDFHX1M)        0.29       6.81 f
+  add_0_root_add_0_root_add_23/U1_11/S (ADDFX8M)          1.21       8.02 r
+  add_0_root_add_0_root_add_23/SUM[11] (non_recursive_filter_DW01_add_0)
+                                                          0.00       8.02 r
+  y[6] (out)                                              0.00       8.02 r
+  data arrival time                                                  8.02
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -8.02
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: delay_line_reg[26][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[26][0]/CK (DFFRQX2M)                     0.00       0.50 r
+  delay_line_reg[26][0]/Q (DFFRQX2M)                      0.50       1.00 f
+  U588/Y (AND2X1M)                                        0.21       1.21 f
+  add_21_root_add_0_root_add_23/U1_1/CO (ADDFX2M)         0.35       1.55 f
+  U272/Y (NAND2X2M)                                       0.08       1.64 r
+  U275/Y (NAND3X2M)                                       0.10       1.74 f
+  add_21_root_add_0_root_add_23/U1_3/CO (ADDFX1M)         0.32       2.06 f
+  add_21_root_add_0_root_add_23/U1_4/CO (ADDFX2M)         0.33       2.39 f
+  add_21_root_add_0_root_add_23/U1_5/CO (ADDFX1M)         0.33       2.72 f
+  add_21_root_add_0_root_add_23/U1_6/CO (ADDFX1M)         0.36       3.08 f
+  U612/Y (XOR3XLM)                                        0.53       3.60 f
+  add_10_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       3.60 f
+  add_10_root_add_0_root_add_23/U1_7/S (ADDFX2M)          0.55       4.16 f
+  add_10_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.53       4.69 f
+  add_5_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.54       5.23 f
+  add_2_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/A[7] (non_recursive_filter_DW01_add_0)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/U1_7/CO (ADDFX8M)          0.64       5.87 f
+  add_0_root_add_0_root_add_23/U6/Y (CLKNAND2X2M)         0.09       5.96 r
+  add_0_root_add_0_root_add_23/U9/Y (NAND3X2M)            0.10       6.06 f
+  add_0_root_add_0_root_add_23/U1_9/CO (ADDFX8M)          0.45       6.52 f
+  add_0_root_add_0_root_add_23/U1_10/S (ADDFHX1M)         0.32       6.84 r
+  add_0_root_add_0_root_add_23/U2/Y (INVXLM)              0.14       6.99 f
+  add_0_root_add_0_root_add_23/U3/Y (INVX8M)              0.75       7.74 r
+  add_0_root_add_0_root_add_23/SUM[10] (non_recursive_filter_DW01_add_0)
+                                                          0.00       7.74 r
+  y[5] (out)                                              0.00       7.74 r
+  data arrival time                                                  7.74
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -7.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.56
+
+
+  Startpoint: delay_line_reg[26][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[26][0]/CK (DFFRQX2M)                     0.00       0.50 r
+  delay_line_reg[26][0]/Q (DFFRQX2M)                      0.50       1.00 f
+  U588/Y (AND2X1M)                                        0.21       1.21 f
+  add_21_root_add_0_root_add_23/U1_1/CO (ADDFX2M)         0.35       1.55 f
+  U272/Y (NAND2X2M)                                       0.08       1.64 r
+  U275/Y (NAND3X2M)                                       0.10       1.74 f
+  add_21_root_add_0_root_add_23/U1_3/CO (ADDFX1M)         0.32       2.06 f
+  add_21_root_add_0_root_add_23/U1_4/CO (ADDFX2M)         0.33       2.39 f
+  add_21_root_add_0_root_add_23/U1_5/CO (ADDFX1M)         0.33       2.72 f
+  add_21_root_add_0_root_add_23/U1_6/CO (ADDFX1M)         0.36       3.08 f
+  U612/Y (XOR3XLM)                                        0.53       3.60 f
+  add_10_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       3.60 f
+  add_10_root_add_0_root_add_23/U1_7/S (ADDFX2M)          0.55       4.16 f
+  add_10_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.53       4.69 f
+  add_5_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.54       5.23 f
+  add_2_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/A[7] (non_recursive_filter_DW01_add_0)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/U1_7/CO (ADDFX8M)          0.64       5.87 f
+  add_0_root_add_0_root_add_23/U6/Y (CLKNAND2X2M)         0.09       5.96 r
+  add_0_root_add_0_root_add_23/U9/Y (NAND3X2M)            0.10       6.06 f
+  add_0_root_add_0_root_add_23/U1_9/S (ADDFX8M)           1.20       7.27 r
+  add_0_root_add_0_root_add_23/SUM[9] (non_recursive_filter_DW01_add_0)
+                                                          0.00       7.27 r
+  y[4] (out)                                              0.00       7.27 r
+  data arrival time                                                  7.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -7.27
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.03
+
+
+  Startpoint: delay_line_reg[26][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[26][0]/CK (DFFRQX2M)                     0.00       0.50 r
+  delay_line_reg[26][0]/Q (DFFRQX2M)                      0.50       1.00 f
+  U588/Y (AND2X1M)                                        0.21       1.21 f
+  add_21_root_add_0_root_add_23/U1_1/CO (ADDFX2M)         0.35       1.55 f
+  U272/Y (NAND2X2M)                                       0.08       1.64 r
+  U275/Y (NAND3X2M)                                       0.10       1.74 f
+  add_21_root_add_0_root_add_23/U1_3/CO (ADDFX1M)         0.32       2.06 f
+  add_21_root_add_0_root_add_23/U1_4/CO (ADDFX2M)         0.33       2.39 f
+  add_21_root_add_0_root_add_23/U1_5/CO (ADDFX1M)         0.33       2.72 f
+  add_21_root_add_0_root_add_23/U1_6/CO (ADDFX1M)         0.36       3.08 f
+  U612/Y (XOR3XLM)                                        0.53       3.60 f
+  add_10_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       3.60 f
+  add_10_root_add_0_root_add_23/U1_7/S (ADDFX2M)          0.55       4.16 f
+  add_10_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.53       4.69 f
+  add_5_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/U1_7/CO (ADDFXLM)          0.50       5.19 f
+  add_2_root_add_0_root_add_23/U1_8/S (ADDFHX1M)          0.36       5.54 r
+  add_2_root_add_0_root_add_23/SUM[8] (non_recursive_filter_DW01_add_6)
+                                                          0.00       5.54 r
+  add_0_root_add_0_root_add_23/A[8] (non_recursive_filter_DW01_add_0)
+                                                          0.00       5.54 r
+  add_0_root_add_0_root_add_23/U25/Y (XOR2XLM)            0.38       5.92 r
+  add_0_root_add_0_root_add_23/U26/Y (CLKXOR2X8M)         1.05       6.97 f
+  add_0_root_add_0_root_add_23/SUM[8] (non_recursive_filter_DW01_add_0)
+                                                          0.00       6.97 f
+  y[3] (out)                                              0.00       6.97 f
+  data arrival time                                                  6.97
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -6.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.33
+
+
+  Startpoint: delay_line_reg[26][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[26][0]/CK (DFFRQX2M)                     0.00       0.50 r
+  delay_line_reg[26][0]/Q (DFFRQX2M)                      0.50       1.00 f
+  U588/Y (AND2X1M)                                        0.21       1.21 f
+  add_21_root_add_0_root_add_23/U1_1/CO (ADDFX2M)         0.35       1.55 f
+  U272/Y (NAND2X2M)                                       0.08       1.64 r
+  U275/Y (NAND3X2M)                                       0.10       1.74 f
+  add_21_root_add_0_root_add_23/U1_3/CO (ADDFX1M)         0.32       2.06 f
+  add_21_root_add_0_root_add_23/U1_4/CO (ADDFX2M)         0.33       2.39 f
+  add_21_root_add_0_root_add_23/U1_5/CO (ADDFX1M)         0.33       2.72 f
+  add_21_root_add_0_root_add_23/U1_6/CO (ADDFX1M)         0.36       3.08 f
+  U612/Y (XOR3XLM)                                        0.53       3.60 f
+  add_10_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       3.60 f
+  add_10_root_add_0_root_add_23/U1_7/S (ADDFX2M)          0.55       4.16 f
+  add_10_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_16)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.16 f
+  add_5_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.53       4.69 f
+  add_5_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_15)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/B[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       4.69 f
+  add_2_root_add_0_root_add_23/U1_7/S (ADDFXLM)           0.54       5.23 f
+  add_2_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_6)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/A[7] (non_recursive_filter_DW01_add_0)
+                                                          0.00       5.23 f
+  add_0_root_add_0_root_add_23/U1_7/S (ADDFX8M)           1.26       6.49 r
+  add_0_root_add_0_root_add_23/SUM[7] (non_recursive_filter_DW01_add_0)
+                                                          0.00       6.49 r
+  y[2] (out)                                              0.00       6.49 r
+  data arrival time                                                  6.49
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -6.49
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.81
+
+
+  Startpoint: delay_line_reg[3][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[3][0]/CK (DFFRQX2M)                      0.00       0.50 r
+  delay_line_reg[3][0]/Q (DFFRQX2M)                       0.49       0.99 f
+  U565/Y (AND2X1M)                                        0.20       1.19 f
+  add_30_root_add_23/U1_1/CO (ADDFX2M)                    0.32       1.51 f
+  add_30_root_add_23/U1_2/CO (ADDFX2M)                    0.33       1.84 f
+  add_30_root_add_23/U1_3/CO (ADDFX2M)                    0.33       2.17 f
+  add_30_root_add_23/U1_4/CO (ADDFX2M)                    0.33       2.50 f
+  add_30_root_add_23/U1_5/CO (ADDFX1M)                    0.33       2.83 f
+  add_30_root_add_23/U1_6/S (ADDFX1M)                     0.30       3.13 r
+  add_14_root_add_0_root_add_23/U1_6/S (ADDFX1M)          0.57       3.70 f
+  add_6_root_add_0_root_add_23/B[6] (non_recursive_filter_DW01_add_7)
+                                                          0.00       3.70 f
+  add_6_root_add_0_root_add_23/U1_6/S (ADDFX1M)           0.54       4.23 f
+  add_6_root_add_0_root_add_23/SUM[6] (non_recursive_filter_DW01_add_7)
+                                                          0.00       4.23 f
+  add_1_root_add_0_root_add_23/B[6] (non_recursive_filter_DW01_add_1)
+                                                          0.00       4.23 f
+  add_1_root_add_0_root_add_23/U1_6/S (ADDFX2M)           0.57       4.80 f
+  add_1_root_add_0_root_add_23/SUM[6] (non_recursive_filter_DW01_add_1)
+                                                          0.00       4.80 f
+  add_0_root_add_0_root_add_23/B[6] (non_recursive_filter_DW01_add_0)
+                                                          0.00       4.80 f
+  add_0_root_add_0_root_add_23/U19/Y (XOR2XLM)            0.34       5.15 r
+  add_0_root_add_0_root_add_23/U20/Y (CLKXOR2X8M)         1.05       6.20 f
+  add_0_root_add_0_root_add_23/SUM[6] (non_recursive_filter_DW01_add_0)
+                                                          0.00       6.20 f
+  y[1] (out)                                              0.00       6.20 f
+  data arrival time                                                  6.20
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -6.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.10
+
+
+  Startpoint: delay_line_reg[26][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  delay_line_reg[26][0]/CK (DFFRQX2M)                     0.00       0.50 r
+  delay_line_reg[26][0]/Q (DFFRQX2M)                      0.50       1.00 f
+  U588/Y (AND2X1M)                                        0.21       1.21 f
+  add_21_root_add_0_root_add_23/U1_1/CO (ADDFX2M)         0.35       1.55 f
+  U271/Y (XOR2XLM)                                        0.23       1.79 r
+  add_10_root_add_0_root_add_23/B[2] (non_recursive_filter_DW01_add_16)
+                                                          0.00       1.79 r
+  add_10_root_add_0_root_add_23/U1_2/S (ADDFXLM)          0.63       2.41 f
+  add_10_root_add_0_root_add_23/SUM[2] (non_recursive_filter_DW01_add_16)
+                                                          0.00       2.41 f
+  add_5_root_add_0_root_add_23/B[2] (non_recursive_filter_DW01_add_15)
+                                                          0.00       2.41 f
+  add_5_root_add_0_root_add_23/U1_2/CO (ADDFX2M)          0.52       2.93 f
+  add_5_root_add_0_root_add_23/U1_3/CO (ADDFX2M)          0.33       3.26 f
+  add_5_root_add_0_root_add_23/U1_4/CO (ADDFX2M)          0.33       3.59 f
+  add_5_root_add_0_root_add_23/U1_5/S (ADDFX1M)           0.30       3.89 r
+  add_5_root_add_0_root_add_23/SUM[5] (non_recursive_filter_DW01_add_15)
+                                                          0.00       3.89 r
+  add_2_root_add_0_root_add_23/B[5] (non_recursive_filter_DW01_add_6)
+                                                          0.00       3.89 r
+  add_2_root_add_0_root_add_23/U1_5/S (ADDFX2M)           0.62       4.51 f
+  add_2_root_add_0_root_add_23/SUM[5] (non_recursive_filter_DW01_add_6)
+                                                          0.00       4.51 f
+  add_0_root_add_0_root_add_23/A[5] (non_recursive_filter_DW01_add_0)
+                                                          0.00       4.51 f
+  add_0_root_add_0_root_add_23/U15/Y (XOR3X8M)            1.22       5.73 r
+  add_0_root_add_0_root_add_23/SUM[5] (non_recursive_filter_DW01_add_0)
+                                                          0.00       5.73 r
+  y[0] (out)                                              0.00       5.73 r
+  data arrival time                                                  5.73
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.20      10.30
+  output external delay                                  -2.00       8.30
+  data required time                                                 8.30
+  --------------------------------------------------------------------------
+  data required time                                                 8.30
+  data arrival time                                                 -5.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.57
+
+
+1

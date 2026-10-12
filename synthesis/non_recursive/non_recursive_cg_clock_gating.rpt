@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : clock_gating
+Design : non_recursive_filter
+Version: O-2018.06-SP1
+Date   : Tue Oct 13 01:32:21 2026
+****************************************
+
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |        1         |
+          |                                       |                  |
+          |    Number of Gated registers          |   256 (99.61%)   |
+          |                                       |                  |
+          |    Number of Ungated registers        |     1 (0.39%)    |
+          |                                       |                  |
+          |    Total number of registers          |      257         |
+          ------------------------------------------------------------
+
+
+
+1
