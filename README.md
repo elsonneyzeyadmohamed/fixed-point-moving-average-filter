@@ -4,6 +4,8 @@ A MATLAB simulation study of a 32-sample moving-average filter. It compares a di
 
 The central design question is: **How can the filter keep its hardware cost low without allowing fixed-point error to grow until it overwhelms the signal?** The simulation answer is to use the recursive update between refreshes, then periodically recompute the current window sum. The refresh interval trades SQNR against correction activity and hardware cost.
 
+The project introduces a great enhancement in power and area by about 25% area decrease and 40% power decrease by using the introduced topology.
+
 > This repository includes the MATLAB study, functional Verilog RTL, a self-checking testbench, and supplied ModelSim waveform evidence. The RTL has not been independently rerun or synthesized as part of this repository update.
 
 ## RTL implementation and results
@@ -27,11 +29,11 @@ Two common implementations have opposing weaknesses:
 
 For this study, quality is measured against the unquantized direct moving average:
 
-\[
-\mathrm{SQNR}=10\log_{10}\left(\frac{P_{signal}}{P_{error}}\right),\qquad
-P_{signal}=\operatorname{mean}(y_{ideal}^2),\quad
-P_{error}=\operatorname{mean}((y-y_{ideal})^2).
-\]
+**SQNR** = 10 × log₁₀(P_signal / P_error)
+
+Where:
+* **P_signal** = mean(y_ideal²)
+* **P_error** = mean((y - y_ideal)²)
 
 The target is a whole-run average SQNR of at least 30 dB.
 
@@ -63,6 +65,24 @@ The script uses one 100,000-sample uniformly random input sequence per run. The 
 The 13-bit case is effectively exact for the modeled input grid, but the displayed value is **not a measured 120 dB performance result**. The script clamps error power to \(10^{-14}\) before the logarithm; when the modeled error is zero, this clamp produces a finite numerical floor near 120 dB.
 
 The report's baseline comparison also shows the key failure mode: direct summation meets the target at all tested non-exact widths (8 bits gives 32.24 dB), while the pure recursive case averages roughly -32 dB for 8 to 12 bits over the run. Periodic refresh bounds that accumulated error. Since the margins for 10 bits at \(C=32\) and 12 bits at \(C=64\) are under 1 dB, the report recommends rerunning with multiple random seeds before treating those margins as robust.
+
+# Synthesis Results
+
+This directory contains the supplied Synopsys Design Compiler reports for the direct-form baseline and refreshed filter, plus scripts to reproduce the flow.
+
+| Metric | Direct form | Refreshed | Change |
+|---|---:|---:|---:|
+| Cell area (library units) | 17,721.101980 | 12,987.237921 | -26.71% |
+| Estimated dynamic power | 323.0997 µW | 176.1216 µW | -45.49% |
+| Estimated cell leakage | 12.6213 µW | 7.2788 µW | -42.33% |
+| QoR critical path length | 7.77 | 0.66 | -91.51% |
+| Logic levels | 20 | 3 | -85.00% |
+| Clock-gating cells | 1 | 34 | +33 |
+| Gated registers | 256/257 (99.61%) | 293/294 (99.66%) | Both about 99.6% |
+| Violating paths | 0 | 0 | Both meet supplied 10 ns clock constraint |
+
+The refreshed form replaces the full-window combinational sum with a running sum, circular buffer, and shadow sum. In the supplied synthesis runs this reduced mapped area and logic depth, while using more state and clock-gating elements.
+
 
 ![Recursive SQNR drifts down over time while the exact-grid case stays near the numerical floor](figures/06-recursive-sqnr-drift.png)
 
