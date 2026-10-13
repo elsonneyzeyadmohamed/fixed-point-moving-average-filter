@@ -66,23 +66,6 @@ The 13-bit case is effectively exact for the modeled input grid, but the display
 
 The report's baseline comparison also shows the key failure mode: direct summation meets the target at all tested non-exact widths (8 bits gives 32.24 dB), while the pure recursive case averages roughly -32 dB for 8 to 12 bits over the run. Periodic refresh bounds that accumulated error. Since the margins for 10 bits at \(C=32\) and 12 bits at \(C=64\) are under 1 dB, the report recommends rerunning with multiple random seeds before treating those margins as robust.
 
-# Synthesis Results
-
-This directory contains the supplied Synopsys Design Compiler reports for the direct-form baseline and refreshed filter, plus scripts to reproduce the flow.
-
-| Metric | Direct form | Refreshed | Change |
-|---|---:|---:|---:|
-| Cell area (library units) | 17,721.101980 | 12,987.237921 | -26.71% |
-| Estimated dynamic power | 323.0997 µW | 176.1216 µW | -45.49% |
-| Estimated cell leakage | 12.6213 µW | 7.2788 µW | -42.33% |
-| QoR critical path length | 7.77 | 0.66 | -91.51% |
-| Logic levels | 20 | 3 | -85.00% |
-| Clock-gating cells | 1 | 34 | +33 |
-| Gated registers | 256/257 (99.61%) | 293/294 (99.66%) | Both about 99.6% |
-| Violating paths | 0 | 0 | Both meet supplied 10 ns clock constraint |
-
-The refreshed form replaces the full-window combinational sum with a running sum, circular buffer, and shadow sum. In the supplied synthesis runs this reduced mapped area and logic depth, while using more state and clock-gating elements.
-
 
 ![Recursive SQNR drifts down over time while the exact-grid case stays near the numerical floor](figures/06-recursive-sqnr-drift.png)
 
@@ -142,9 +125,22 @@ The input is randomly generated with `randi([-128, 127], 1, 100000)`. No random 
 - [SQNR versus refresh interval](figures/12-sqnr-vs-refresh-interval.png)
 - [Refreshed SQNR histogram](figures/13-refresh-sqnr-histogram.png)
 
-## Synthesis comparison
+# Synthesis Results
 
-The supplied Design Compiler reports show the refreshed implementation with 26.71% lower mapped area and 45.49% lower estimated dynamic power than the direct-form baseline. The synthesis paths are also shallower (3 logic levels vs 20). These power numbers are low-effort estimates with unannotated activity, not measured silicon values. See the [full metric comparison and report files](synthesis/README.md).
+This directory contains the supplied Synopsys Design Compiler reports for the direct-form baseline and refreshed filter, plus scripts to reproduce the flow.
+
+| Metric | Direct form | Refreshed | Change |
+|---|---:|---:|---:|
+| Cell area (library units) | 17,721.101980 | 12,987.237921 | -26.71% |
+| Estimated dynamic power | 323.0997 µW | 176.1216 µW | -45.49% |
+| Estimated cell leakage | 12.6213 µW | 7.2788 µW | -42.33% |
+| QoR critical path length | 7.77 | 0.66 | -91.51% |
+| Logic levels | 20 | 3 | -85.00% |
+| Clock-gating cells | 1 | 34 | +33 |
+| Gated registers | 256/257 (99.61%) | 293/294 (99.66%) | Both about 99.6% |
+| Violating paths | 0 | 0 | Both meet supplied 10 ns clock constraint |
+
+The refreshed form replaces the full-window combinational sum with a running sum, circular buffer, and shadow sum. In the supplied synthesis runs this reduced mapped area and logic depth, while using more state and clock-gating elements.
 
 ## Reference
 
